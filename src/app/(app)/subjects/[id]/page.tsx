@@ -313,7 +313,7 @@ export default function SubjectPage() {
               { value: 'explain', label: '💡 Explain Concept' },
             ].map(m => (
               <button key={m.value} onClick={() => setAiMode(m.value as any)} style={{
-                padding: '7px 14px', borderRadius: 8, fontSize: 13, border: 'none', cursor: 'pointer',
+                padding: '7px 14px', borderRadius: 8, fontSize: 13, cursor: 'pointer',
                 background: aiMode === m.value ? 'var(--accent)' : 'var(--surface-2)',
                 color: aiMode === m.value ? '#fff' : 'var(--text-muted)',
                 border: `1px solid ${aiMode === m.value ? 'var(--accent)' : 'var(--border)'}`,
