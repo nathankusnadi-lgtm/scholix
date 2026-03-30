@@ -142,7 +142,7 @@ export default function SubjectPage() {
         const qs = await generatePracticeQuestions(subject?.name ?? 'topic', notesText || `${subject?.name} fundamentals`, 5);
         setAiResult(qs.map((q, i) => `Q${i + 1}: ${q.question}\nA: ${q.answer}`).join('\n\n'));
       } else {
-        const result = await explainConcept(aiQuery || subject?.name ?? 'topic', notesText);
+        const result = await explainConcept((aiQuery || subject?.name) ?? 'topic', notesText);
         setAiResult(result);
       }
     } catch {
